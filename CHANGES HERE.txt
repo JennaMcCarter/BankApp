@@ -1,0 +1,21 @@
+Changes:
+Login.cshtml - 
+changed "Register new user" to match requirements "Create a new account"
+removed extraneous info on two factor auth login
+
+SavingsAccount.cshtml
+Missing requirement "Check balance".  Do not change requirements, follow them exactly.
+Rename  "View history" to "See transaction history".  Do not change requirements, follow them exactly.
+
+_LoginPartial.cshtml
+CHanged "Log off" to match requirements  "Log out"
+
+HomeController.cs
+Changed  ViewBag.Message = "Your application description page."; to  ViewBag.Message = "Meow Banking app for AltSource";
+CHanged  ViewBag.Message = "Your contact page."; to  ViewBag.Message = "Contact us Meow!";
+
+Misc:
+Remove "Savings" folder from project if nothing will be in it
+Changed Copyright footer to "Ace Developer Jenna, Inc"
+removed template UI
+Put your name / initials in comments so reviewers can find your code
