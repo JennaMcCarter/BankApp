@@ -23,6 +23,9 @@ namespace BankingApp
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/siteScrolling").Include(
+                        "~/Scripts/parallaxScrollingScript.js*"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

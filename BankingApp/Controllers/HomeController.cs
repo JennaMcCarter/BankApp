@@ -15,15 +15,11 @@ namespace BankingApp.Controllers
 
         public ActionResult About()
         {
-            // Change from template code to app specific - JM
-            ViewBag.Message = "Meow Banking app for AltSource";
             return View();
         }
 
         public ActionResult Contact()
         {
-            // Change from template code to app specific - JM
-            ViewBag.Message = "Contact us Meow!";
             return View();
         }
     }
