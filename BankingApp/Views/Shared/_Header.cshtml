@@ -1,0 +1,15 @@
+﻿<!--Header - Jenna McCarter-->
+
+<menu>
+    <header><h1><i class="fa fa-moon-o" aria-hidden="true"></i> Bank of the Moon</h1></header>
+    <nav>
+        <input type="checkbox" id="menuCheckbox" checked>  <label for="menuCheckbox"><i class="fa fa-bars" aria-hidden="true"></i></label>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Savings Account", "SavingsAccount", "Manage")</li>
+            @Html.Partial("_LoginPartial")
+        </ul>
+    </nav>
+</menu>

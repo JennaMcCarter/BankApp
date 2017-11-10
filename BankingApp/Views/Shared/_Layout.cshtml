@@ -1,0 +1,56 @@
+﻿<!--Main Layout - for when there is a lot on the page - Jenna McCarter-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps|Lily+Script+One|Lobster+Two|Love+Ya+Like+A+Sister|Muli:400,400i,900i|Oregano|Permanent+Marker|Poiret+One|Special+Elite|Spirax" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/theme")
+
+</head>
+<body>
+    <div id="wrapper2" style="background-position: 0px 0px;">
+        <div id="wrapper" style="z-index: 10; background-position: 0px 0px;">
+
+            @Html.Partial("_Header");
+
+
+            <header class="pageHeader">
+                <h1> Bank of the Moon </h1>
+                <h2> The Moon's #1 Bank </h2>
+            </header>
+
+
+
+
+            @RenderBody()
+
+
+            @Html.Partial("_Footer");
+
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        var topDiv = document.getElementById("wrapper");
+        var topDiv2 = document.getElementById("wrapper2");
+        var speed = 3.5;
+
+        window.onscroll = function () {
+            var yOffset = window.pageYOffset;
+            topDiv.style.backgroundPosition = "0px " + (yOffset / speed) + "px";
+            topDiv2.style.backgroundPosition = "0px " + (yOffset / speed) + "px";
+        }
+
+    </script>
+</body>
+</html>

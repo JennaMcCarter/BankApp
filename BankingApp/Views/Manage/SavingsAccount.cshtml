@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Bank of the Moon | Savings Account";
+    Layout = "~/Views/Shared/_LayoutSmall.cshtml";
+}
+
+<!--Main account page- Jenna McCarter-->
+
+        <h2>Saving Account</h2>
+        <div>
+            <ul>
+                <li>@Html.ActionLink("Check Balance", "SavingsAccountBalance", "Manage")</li>
+                <li>@Html.ActionLink("Withdraw", "SavingsAccountWithdraw", "Manage")</li>
+                <li>@Html.ActionLink("Deposit", "SavingsAccountDeposit", "Manage")</li>
+                <li>@Html.ActionLink("See transaction history", "SavingsAccountHistory", "Manage")</li>
+            </ul>
+        </div>

@@ -1,0 +1,20 @@
+﻿@model BankingApp.Models.accountSavingsModel
+
+@{
+    ViewBag.Title = "Bank of the Moon | Savings Account Balance";
+    Layout = "~/Views/Shared/_LayoutSmall.cshtml";
+}
+
+<!--Check Balance page - Jenna McCarter-->
+
+<h1>
+    Balance
+</h1>
+<div>
+    <p><label>Current Balance:</label> $@Model.Balance</p>
+    <p><label>Date:</label> @Model.TransactionDate</p>
+</div>
+
+<div>
+    @Html.ActionLink("Return to Savings Account", "SavingsAccount", "Manage", new { Class = "button" })
+</div>

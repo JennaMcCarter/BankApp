@@ -1,0 +1,29 @@
+﻿@model BankingApp.Models.accountSavingsModel
+
+@{
+    ViewBag.Title = "Bank of the Moon | Savings Account Withdraw";
+    Layout = "~/Views/Shared/_LayoutSmall.cshtml";
+}
+
+<!--Withdraw Account page - Jenna McCarter-->
+
+        <h1>
+            Savings Withdraw
+        </h1>
+        <div>
+            <p><label>Current Balance:</label> $@Model.Balance</p>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.HiddenFor(model => model.TransactionID, new { htmlAttributes = new { @class = "form-control"} })
+                @Html.EditorFor(model => model.Balance, new { htmlAttributes = new { @class = "form-control", Value = "", Type="Number", Step = "0.01" } })
+                @Html.ValidationMessageFor(model => model.Balance, "", new { @class = "text-danger" })
+                <input type="submit" value="Withdraw" class="btn btn-default" />
+            </div>
+        }
+
+    <div>
+        @Html.ActionLink("Return to Savings Account", "SavingsAccount", "Manage", new { Class = "button" })
+    </div>

@@ -1,0 +1,34 @@
+﻿<!--Layout - simple version of layout - Jenna McCarter-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps|Lily+Script+One|Lobster+Two|Love+Ya+Like+A+Sister|Muli:400,400i,900i|Oregano|Permanent+Marker|Poiret+One|Special+Elite|Spirax" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/theme")
+
+</head>
+<body>
+       
+
+            @Html.Partial("_Header");
+
+
+           <main class="mainSection">
+               @RenderBody()
+           </main>
+
+
+
+            @Html.Partial("_Footer");
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

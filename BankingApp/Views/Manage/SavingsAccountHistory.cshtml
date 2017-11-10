@@ -1,0 +1,47 @@
+﻿@model BankingApp.Models.accountSavingsListModel
+
+@{
+    ViewBag.Title = "Bank of the Moon | Savings Account History";
+    Layout = "~/Views/Shared/_LayoutSmall.cshtml";
+}
+
+<!--History Account page - Jenna McCarter-->
+
+
+        <h1>
+            Savings Account History
+        </h1>
+
+        @if (Model != null)
+        {
+        <table>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Date</th>
+                    <th>Transaction</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.balanceHistory)
+                {
+                    <tr>
+                        <td>@item.TransactionID</td>
+                        <td>@item.TransactionDate</td>
+                        <td>$@item.Transaction</td>
+                        <td>$@item.Balance</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        }
+        else
+        {
+            <p>Your history is empty! Please go make a transaction.</p>
+        }
+
+
+        <div>
+            @Html.ActionLink("Return to Savings Account", "SavingsAccount", "Manage", new { Class = "button" })
+        </div>  

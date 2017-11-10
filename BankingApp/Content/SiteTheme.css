@@ -1,0 +1,258 @@
+﻿/* Jenna McCarter - Styling for the whole site*/
+
+
+
+/*main layout*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Muli', sans-serif;
+    background: url(../images/background.jpg) no-repeat;
+    background-position: 0px;
+    background-size: cover;
+}
+
+
+
+menu {
+    background: #0f1219;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+menu header {
+    font-weight: bold;
+    margin-left: 16px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+menu header h1 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 25px;
+}
+
+menu header, menu nav {
+    color: #FFF;
+    display: inline-block;
+}
+
+menu nav ul {
+    margin: 0;
+    list-style-type: none;
+    text-align: right;
+    padding: 8px 32px;
+}
+
+menu nav ul li {
+    display: inline-block;
+}
+
+menu nav #menuCheckbox, label[for=menuCheckbox] {
+    display: none;
+}
+
+menu nav ul a, menu nav ul a:visited {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+menu nav ul a:hover {
+    text-decoration: underline;
+}
+
+menu nav ul a .fa {
+    margin-right: 4px;
+}
+
+
+main.mainSection{
+    background: #FFF;
+    width: 75%;
+    margin: 150px auto;
+    padding: 16px;
+}
+
+#wrapper2 {
+    background: url(../images/background.jpg) no-repeat;
+    background-position: 0px 740px;
+    background-size: cover;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+}
+
+#wrapper {
+    background: url(../images/background.jpg) no-repeat;
+    background-position: 0px 740px;
+    background-size: cover;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 1000px;
+}
+
+header.pageHeader {
+    color: #FFF;
+    padding: 250px 0 100px 0;
+    text-align: center;
+}
+
+header.pageHeader h1, header.pageHeader h2 {
+    text-shadow: 1px 1px 10px #000;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 75px;
+}
+
+h2 {
+    font-family: 'Muli', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.contentbox {
+    display: block;
+    margin: 75px auto;
+    width: 100%;
+}
+
+.contentstyling {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 70px;
+    width: 100%;
+    text-align: center;
+    padding: 0 0;
+    position: center;
+    overflow-x: hidden;
+    border-top: solid white 15px;
+    border-bottom: solid white 15px;
+}
+
+.contentstyling .content, .contentstyling img {
+    vertical-align: top;
+}
+
+.contentstyling .content {
+    background: #FFF;
+    display: inline-block;
+    width: 50%;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+    padding: 32px 32px;
+}
+
+.contentstyling .content h2 {
+    color: #15257d;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contentstyling .content a {
+    color: #1934c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer, footer p {
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+
+/*for mobile*/
+@media (max-width: 945px) {
+    .contentstyling img {
+        display: none;
+    }
+
+    menu {
+        display: initial;
+    }
+
+    menu header, menu nav {
+        display: block;
+        width: 100%;
+    }
+
+    menu nav ul li {
+        border-top: 1px solid #FFF;
+        display: block;
+        text-align: left;
+    }
+
+
+    menu nav ul .mobileMenubar {
+    display: block;
+    }
+
+    .fa-bars {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+        margin: 0 32px;
+    }
+
+    .fa-bars:hover {
+        cursor: pointer;
+    }
+
+    #menuCheckbox, #menuCheckbox:checked + label + ul {
+        display: none;
+    }
+
+    menu nav ul li a {
+        display: block;
+        line-height: 32px;
+        width: 100%;
+    }
+
+    menu nav ul li a i {
+        width: 22px;
+    }
+}
+
+
+
+/*additional styling*/
+main {
+    margin: 100px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+}
+
+
+table thead tr, table tbody tr:nth-child(even) {
+    background: lightgrey;
+}
+
+
+.serenityImage{
+    max-height: 200px;
+}
