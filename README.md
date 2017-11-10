@@ -15,8 +15,6 @@ For my work process, I first made a list of all functionality and grouped them b
 From there, I then made a list of needed pages and created the views. After that, I then created the models that would be needed to display the information. I used cookies to store the transactions and used a controller to manage what views got what information.
 Once everything was working the way I wanted it to, I styled the pages and added additional (but not needed) content.
 
-Lastly, I did user testing and fixes (recruiting family members for my QA testers).
-
 ## Project Documentation:
 I have included comments inside the code for you to follow along with my thought process.
 
